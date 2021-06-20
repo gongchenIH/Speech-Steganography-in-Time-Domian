@@ -14,14 +14,14 @@ fid  = fopen(msg_dir, 'r');
 text = fread(fid,'*char')';
 fclose(fid);
 
-L_min = 8*1024; % Minimum value for segment length
+L_min = 8*1024; 
 L_msg = 8*length(text);
 
 s.len  = length(audio.data(:,1));
 L2 = floor(s.len/L_msg);
-L  = max(L_min, L2);           %Length of segments
+L  = max(L_min, L2);           
 nframe = floor(s.len/L);
-N = nframe - mod(nframe, 8);   %Number of segments
+N = nframe - mod(nframe, 8);   
 
 xsig = reshape(audio.data(1:N*L,1), L, N);  %Divide signal into N segments
 
@@ -30,7 +30,7 @@ r = ones(L,1);
 data = num2str(zeros(N,1))';
 c = zeros(1,N);
 for k=1:N  
-    c(k)=sum(xsig(:,k).*r)/L;   %Correlation
+    c(k)=sum(xsig(:,k).*r)/L;  
     if c(k)<0
         data(k) = '0';
     else

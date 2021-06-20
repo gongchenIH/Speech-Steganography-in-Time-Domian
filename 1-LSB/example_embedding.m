@@ -22,10 +22,8 @@ fclose(cover_f);
 msg_f = fopen(msg_dir,'r'); 
 msg_text = fread(msg_f,'*char')';
 
-%[msg, msg_len] = fread(msg_f,'ubit1') ; 
 fclose(msg_f);
-% covert to binary 
-%msg_double = double(msg_text);       
+% covert to binary      
 msg_bin = de2bi(double(msg_text),8);  
 [m,n] = size(msg_bin);          
 msg_bin_v = reshape(msg_bin,m*n,1);     

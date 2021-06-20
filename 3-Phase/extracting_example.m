@@ -15,12 +15,11 @@ fid  = fopen(msg_dir, 'r');
 text = fread(fid,'*char')';
 fclose(fid);
 
-m   = 8*length(text);             % Length of bit sequence (for 8bit)
-x   = audio.data(1:L,1);       % First segment
-Pha = angle(fft(x));       % Phase angles of first segment
+m   = 8*length(text);             
+x   = audio.data(1:L,1);      
+Pha = angle(fft(x));       
 
-% Retrieving data back from phases of first segments
-data = char(zeros(1,m));   % Empty data sequence
+data = char(zeros(1,m));   
 for k=1:m
 	if Pha(L/2-m+k)>0
     	data(k)='0';
