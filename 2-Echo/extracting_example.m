@@ -6,10 +6,10 @@ cover_dir = '.\CoverDir\cover.wav';
 stego_dir = '.\StegoDir\stego.wav';
 msg_dir = '.\MsgDir\text.txt';
 
-d0 = 150;     %Delay rate for bit0
-d1 = 200;     %Delay rate for bit1
-alpha = 0.5;  %Echo amplitude
-L = 8*1024;   %Length of frames
+d0 = 150;    
+d1 = 200;     
+alpha = 0.5;  
+L = 8*1024;   
 
 [audio.data, audio.fs] = audioread(stego_dir);
 finfo = audioinfo(cover_dir);
@@ -24,7 +24,7 @@ xsig = reshape(audio.data(1:N*L,1), L, N);   %Divide signal into frames
 data = char.empty(N, 0);
 
 for k=1:N
-	rceps = ifft(log(abs(fft(xsig(:,k)))));  %Real cepstrum
+	rceps = ifft(log(abs(fft(xsig(:,k)))));  
 	if (rceps(d0+1) >= rceps(d1+1))
         data(k) = '0';
 	else
@@ -33,8 +33,8 @@ for k=1:N
 end
 
 m   = floor(N/8);
-bin = reshape(data(1:8*m), 8, m)';   %Retrieved in binary
-msg = char(bin2dec(bin))';           %bin=>char
+bin = reshape(data(1:8*m), 8, m)';   
+msg = char(bin2dec(bin))';           
 
 len_msg = 0;
 if (len_msg~=0)
