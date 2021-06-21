@@ -4,7 +4,7 @@
   $$
   h(n)=\delta(n)+ \alpha \delta(n-d)
   $$
-  式中：$h(n)$示回声核，$δ(n)$表示单位脉冲信号，$\alpha$ 为回声幅度，$d(n)$为回声延迟。
+  式中：$h(n)$示回声核，$δ(n)$表示单位脉冲信号，$\alpha(n)$ 为回声幅度，$d(n)$为回声延迟。
   
 - CoverDir : 存放cover的载体WAVE文件。
 
@@ -20,7 +20,7 @@ Principe: Human auditory system has shielding characteristics, that is, within a
 $$
 h(n)=\delta(n)+ \alpha \delta(n-d)
 $$
-whereas $h(n)$ represents the echo nucleus, $\delta(n)$ represents the unit pulse signal, $\alpha$ is the echo amplitude, and $d$ is the echo delay.
+whereas $h(n)$ represents the echo nucleus, $\delta(n)$ represents the unit pulse signal, $\alpha(n)$ is the echo amplitude, and $d(n)$ is the echo delay.
 
 - CoverDir : Store the cover carrier WAVE file.
 - StegoDir : Store the carrier WAVE file of stego.
