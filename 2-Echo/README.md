@@ -1,11 +1,10 @@
 # 回声隐藏：
 
-- 原理：人类听觉系统具有屏蔽特性，即，相距很短的几十ms 语音内），幅度较弱者会被较强者遮蔽。通过利用此特性，在音频中引入回声来嵌入秘密信息。将音频载体$s(n)$分段，每段长度从几毫秒到几十毫秒，每段用于嵌入1 bit的密信,然后构造2个分别代表密信“0”和“1”的不同回声核。回声核是回声隐藏算法最重要的部分。回声核的回声幅度$\alpha$一般值取为 0. 6~0. 9，用 2 个不同的延迟时长 $d_{0},d_{1}$代表不同密信比特，一般延迟时长为0. 5~2 ms。当密信比特为0时，该段加上代表“0”的回声核；密信比特为 1 时，该段加上代表“1”的回声核。回声核的回声幅度需要精心挑选：当回声幅度过小时，会出现提取失败的问题；但当回声幅度过大时，又会使隐藏的效果大大降低。传统回声核可表示为：																					
-
+- 原理：人类听觉系统具有屏蔽特性，即，相距很短的几十ms 语音内），幅度较弱者会被较强者遮蔽。通过利用此特性，在音频中引入回声来嵌入秘密信息。将音频载体$s(n)$分段，每段长度从几毫秒到几十毫秒，每段用于嵌入1 bit的密信,然后构造2个分别代表密信“0”和“1”的不同回声核。回声核是回声隐藏算法最重要的部分。回声核的回声幅度$\alpha$一般值取为 $0. 6$~$0. 9$，用 2 个不同的延迟时长 $d_{0}$,$d_{1}$代表不同密信比特，一般延迟时长为$0. 5$~$2$ ms。当密信比特为0时，该段加上代表“0”的回声核；密信比特为 1 时，该段加上代表“1”的回声核。回声核的回声幅度需要精心挑选：当回声幅度过小时，会出现提取失败的问题；但当回声幅度过大时，又会使隐藏的效果大大降低。传统回声核可表示为：																					
   $$
   h(n)=\delta(n)+ \alpha \delta(n-d)
   $$
-  式中：*h*(*n* )表示回声核，*δ* (*n* )表示单位脉冲信号，*α* 为回声幅度，*d*为回声延迟。
+  式中：$h(n)$示回声核，$δ(n)$表示单位脉冲信号，$\alpha(n)$ 为回声幅度，$d(n)$为回声延迟。
   
 - CoverDir : 存放cover的载体WAVE文件。
 
@@ -21,7 +20,7 @@ Principe: Human auditory system has shielding characteristics, that is, within a
 $$
 h(n)=\delta(n)+ \alpha \delta(n-d)
 $$
-whereas $h(n)$ represents the echo nucleus, $\delta(n)$ represents the unit pulse signal, $\alpha$ is the echo amplitude, and $d$ is the echo delay.
+whereas $h(n)$ represents the echo nucleus, $\delta(n)$ represents the unit pulse signal, $\alpha(n)$ is the echo amplitude, and $d(n)$ is the echo delay.
 
 - CoverDir : Store the cover carrier WAVE file.
 - StegoDir : Store the carrier WAVE file of stego.
