@@ -7,7 +7,11 @@
 
 - MsgDir : 存放消息的文本文件。
 
+  ![Image](https://github.com/gongchenIH/Pic/blob/master/WaveFormat.png)
   
+  
+  
+  WAVE文件格式图<img src="I:\GC\StegaographyWorkSpace\GitPic\WaveFormat.png" alt="WaveFormat" style="zoom:67%;" />
 
 # LSBR：
 
@@ -18,5 +22,3 @@
 - MsgDir : Text file for storing messages.
 
 
-
-<img src="I:\GC\StegaographyWorkSpace\WaveFormat.png" style="zoom:90%;" />
