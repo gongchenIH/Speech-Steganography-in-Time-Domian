@@ -9,8 +9,6 @@
 
   ​						      ![Image](https://github.com/gongchenIH/Pic/blob/master/WaveFormat.png)
   
-  
-
 # LSBR：
 
 - Principle:Least Significant Bit Replacement (LSBR)is to replace the LSB  bit of the carrier according to the binary message.The message will be embedded in the data part of the WAVE file, which is after 44 bytes.
