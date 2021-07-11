@@ -7,7 +7,7 @@
 
 - MsgDir : 存放消息的文本文件。
 
-                                                      ![Image](https://github.com/gongchenIH/Pic/blob/master/WaveFormat.png)
+![Image](https://github.com/gongchenIH/Pic/blob/master/WaveFormat.png)
   
   
  
